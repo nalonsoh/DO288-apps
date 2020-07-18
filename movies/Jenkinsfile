@@ -94,7 +94,6 @@ pipeline {
 
         stage('Wait for deployment in DEV env') {
             steps {
-				step {
 					script {
 						openshift.withCluster() {
 						  openshift.withProject(env.DEV_PROJECT) {
@@ -104,7 +103,6 @@ pipeline {
 						  }
 						}
 					}
-				}
 			}
         }
 
