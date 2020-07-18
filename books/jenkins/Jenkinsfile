@@ -103,7 +103,7 @@ pipeline {
 
         stage('Promote to Staging Env') {
             steps {
-                timeout(time: 60, unit: 'MINUTES') {
+                timeout(time: 1, unit: 'MINUTES') {
                     input message: "Promote to Staging?"
                 }
                 script {
